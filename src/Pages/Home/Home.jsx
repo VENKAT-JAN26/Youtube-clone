@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import Feed from '../../Components/Feed/feed';
-//import Feed from "../../Components/Feed/Feed"; // Correct case-sensitive import
+
+
 
 import Sidebar from '../../Components/Sidebar/sidebar';
 import './Home.css';
 import PropTypes from 'prop-types';
+import Feeds from '../../Components/Feed/feed';
 
 const Home = ({sidebar}) => {
 
@@ -16,7 +17,7 @@ const Home = ({sidebar}) => {
       <Sidebar sidebar={sidebar} category={category} setCategory={setCategory} />
 
       <div className={`container ${sidebar?"":'largecontainer'}`}>
-        <Feed category={category} setCategory={setCategory} />
+        <Feeds category={category} setCategory={setCategory}/>
       </div>
     </>
   );

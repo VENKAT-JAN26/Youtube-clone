@@ -93,7 +93,7 @@ import { value_converter } from "../../data";
 import moment from "moment";
 import PropTypes from "prop-types";
 
-const Feed = ({ category }) => {
+const Feeds = ({ category }) => {
   const [data, setData] = useState([]);
 
   const fetchData = async () => {
@@ -126,9 +126,9 @@ const Feed = ({ category }) => {
 };
 
 // Add propTypes validation
-Feed.propTypes = {
+Feeds.propTypes = {
   category: PropTypes.string.isRequired, // Specify that 'category' is a required string
 };
 
 
-export default Feed;
+export default Feeds;
