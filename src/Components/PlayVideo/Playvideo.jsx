@@ -1,10 +1,10 @@
 import "./Playvideo.css";
-import video1 from "../../assets/video.mp4";
+//import video1 from "../../assets/video.mp4";
 import like from "../../assets/like.png";
 import dislike from "../../assets/dislike.png";
 import share from "../../assets/share.png";
 import save from "../../assets/save.png";
-import jack from "../../assets/jack.png";
+//import jack from "../../assets/jack.png";
 import user_profile from "../../assets/user_profile.jpg";
 import { useEffect, useState } from "react";
 import { API_KEY, value_converter } from "../../data";
@@ -18,7 +18,7 @@ const Playvideo = () => {
 
   const [apiData, SetApiData] = useState(null);
   const [chennalData, setChannelData] = useState(null);
-  const [commentData, setCommentData] = useState(null);
+  //const [commentData, setCommentData] = useState(null);
 
 
   //fetching video data
@@ -72,9 +72,9 @@ const Playvideo = () => {
         {/* <video src={video1} controls autoPlay muted></video> */}
         <iframe
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-          frameborder="0"
+          // frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
+          // referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
 

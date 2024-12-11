@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Feed from '../../Components/Feed/feed';
 import Sidebar from '../../Components/Sidebar/sidebar';
 import './Home.css';
+import PropTypes from 'prop-types';
 
 const Home = ({sidebar}) => {
 
@@ -17,6 +18,12 @@ const Home = ({sidebar}) => {
       </div>
     </>
   );
+};
+
+
+// Add propTypes validation
+Home.propTypes = {
+  sidebar: PropTypes.bool.isRequired, // Validate 'sidebar' as a required boolean prop
 };
 
 export default Home;

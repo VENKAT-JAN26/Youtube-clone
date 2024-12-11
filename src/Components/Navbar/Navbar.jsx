@@ -7,6 +7,7 @@ import more_icon from "../../assets/more.png";
 import notification_icon from "../../assets/notification.png";
 import profile_icon from "../../assets/jack.png";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Navbar = ({setSidebar}) => {
   return (
@@ -40,6 +41,12 @@ const Navbar = ({setSidebar}) => {
       </div>
     </nav>
   );
+};
+
+
+// Add propTypes validation
+Navbar.propTypes = {
+  setSidebar: PropTypes.func.isRequired, // Validate that setSidebar is a required function
 };
 
 export default Navbar;

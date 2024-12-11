@@ -91,6 +91,7 @@ import { API_KEY } from "../../data";
 import { Link } from "react-router-dom";
 import { value_converter } from "../../data";
 import moment from "moment";
+import PropTypes from "prop-types";
 
 const Feed = ({ category }) => {
   const [data, setData] = useState([]);
@@ -107,11 +108,11 @@ const Feed = ({ category }) => {
   }, [category]);
 
   return (
-    <>
+    
       <div className="feed">
         {data.map((item, index) => {
           return (
-            <Link to={`video/${item.snippet.categoryId}/${item.id}`} className="card">
+            <Link key={index} to={`video/${item.snippet.categoryId}/${item.id}`} className="card">
               <img src={item.snippet.thumbnails.medium.url} alt="" />
               <h2>{item.snippet.title}</h2>
               <h3>{item.snippet.channelTitle}</h3>
@@ -120,8 +121,14 @@ const Feed = ({ category }) => {
           );
         })}
       </div>
-    </>
+    
   );
 };
+
+// Add propTypes validation
+Feed.propTypes = {
+  category: PropTypes.string.isRequired, // Specify that 'category' is a required string
+};
+
 
 export default Feed;
